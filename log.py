@@ -24,8 +24,6 @@ def authenticate(key):
 	return gc
 
 def main():
-	sheet = ""
-
 	#parse arguments
 
 	parser = argparse.ArgumentParser(prog="log")
@@ -37,7 +35,7 @@ def main():
 
 	args = parser.parse_args()
 	
-	#just in case...
+	#just in case... we'll write it ti this file.
 
 	file = open("/logging/log.txt", "a+")
 	file.write(args.data)
