@@ -1,4 +1,4 @@
-This guide details how to set up logging from your host to Google Drive.
+This guide details how to set up logging from your host to Google Drive. Your group has to do this so that we can periodically grade your logs. It may take up to 15 minutes to complete (sorry).
 
 	Note: Commands in this format should be run in the terminal on your OpenVZ Host.
 
