@@ -25,4 +25,4 @@ And your sheetid is the long string in the URL of the Google Sheet. If your URL 
 
 https://docs.google.com/spreadsheets/d/1tlssiBoaiolsFMpvJFaC9JCFA7tfrYu30rIU4TVvNcM/edit#gid=1199366553
 
-then your sheetid is 1tlssiBoaiolsFMpvJFaC9JCFA7tfrYu30rIU4TVvNcM
+then your sheetid is: 1tlssiBoaiolsFMpvJFaC9JCFA7tfrYu30rIU4TVvNcM
