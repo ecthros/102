@@ -32,11 +32,15 @@ To run the script, use:
 
 Where you need to replace the things inside the angle brackets (and the angle brackets themselves!) with the following data:
 
-The JSON file should be the absolute path to the file, like:
+1. The JSON file should be the absolute path to the file, like:
 	/root/stuff/hacs.json
 
-And your sheetid is the long string in the URL of the Google Sheet. If your URL is
+2. And your sheetid is the long string in the URL of the Google Sheet. If your URL is
 
 https://docs.google.com/spreadsheets/d/1tlssiBoaiolsFMpvJFaC9JCFA7tfrYu30rIU4TVvNcM/edit#gid=1199366553
 
 then your sheetid is: 1tlssiBoaiolsFMpvJFaC9JCFA7tfrYu30rIU4TVvNcM
+
+3. data is comma-separated values for your data. If I wanted to update the sheet with all the TAs names, I would use the following command:
+
+	log -k /root/stuff/hacs.json -s 1tlssiBoaiolsFMpvJFaC9JCFA7tfrYu30rIU4TVvNcM -d "Toby,George,Matt,Louis-Henri"
