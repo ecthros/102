@@ -12,7 +12,7 @@ Now that you've downloaded the code, install the necessary dependencies:
 	sudo ./setup.sh
 	cd 102
 
-Head to <a href=https://console.developers.google.com/apis/api/drive/overview>Google Developers Console</a>. Click on "Create Project" in the top right corner. Then select "Create a Project". Name the project anything (I named mine "Hacs 102 Group 2K). Agree to the terms and press "Create". Finally, next to "Google Drive API", make sure to click "Enable":
+Head to <a href=https://console.developers.google.com/apis/api/drive/overview>Google Developers Console</a>. Click on "Create Project" in the top right corner. Then select "Create a Project". Name the project anything (I named mine "Hacs 102 Group 2K). Agree to the terms and press "Create". Wait for it to load, and then next to "Google Drive API", make sure to click "Enable":
 
 ![image](https://cloud.githubusercontent.com/assets/14065974/22453363/4bd47b48-e74c-11e6-9d71-8c6c596d5561.png)
 
