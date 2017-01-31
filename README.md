@@ -30,6 +30,8 @@ To run the script, use:
 
 	log -k <yourJSONfile> -s <sheetid> -d <data>
 
+Where you need to replace the things inside the angle brackets (and the angle brackets themselves!) with the following data:
+
 The JSON file should be the absolute path to the file, like:
 	/root/stuff/hacs.json
 
