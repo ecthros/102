@@ -1,5 +1,5 @@
 #!/bin/bash
-# <3 Connor Wenck
+
 OS=$(uname)
 if [ "$OS" == "Linux" ]; then
 	sudo apt-get install python-pip python-dev libssl-dev libffi-dev curl
