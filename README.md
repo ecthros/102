@@ -1,5 +1,7 @@
 This guide details how to set up logging from your host to Google Drive.
 
+	Note: Commands in this format should be run in the terminal on your OpenVZ Host.
+
 Begin by downloading the repository: 
 
 	sudo apt-get install git
