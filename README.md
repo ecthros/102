@@ -9,10 +9,10 @@ Begin by downloading the repository:
 
 Now that you've downloaded the code, install the necessary dependencies:
 
-	sudo ./setup.sh
 	cd 102
+	sudo ./setup.sh
 
-Head to <a href=https://console.developers.google.com/apis/api/drive/overview>Google Developers Console</a>. Click on "Create Project" in the top right corner. Then select "Create a Project". Name the project anything (I named mine "Hacs 102 Group 2K).
+Head to the <a href=https://console.developers.google.com/apis/api/drive/overview>Google Developers Console</a>. Click on "Create Project" in the top right corner. Then select "Create a Project". Name the project anything (I named mine "Hacs 102 Group 2K).
 
 ![image](https://cloud.githubusercontent.com/assets/14065974/22453687/95824976-e74e-11e6-87fe-7fd09ae55345.png)
 
@@ -26,7 +26,9 @@ Click on one of the tabs on the left labeled "Credentials". Choose “New Creden
 
 Select "Compute Engine Default service account" and click "Create". A .json file will be downloaded.
 
-Now that you've downloaded the .json file, you need to move the file to your host. There are a number of ways to do this - either using scp or uploading the file to dropbox and using wget. You could also copy and paste. You will need the location of this file for later.
+![image](https://cloud.githubusercontent.com/assets/14065974/22453807/95c3e81c-e74f-11e6-80af-0376334e2e80.png)
+
+Now that you've downloaded the .json file, you need to move the file to your host. There are a number of ways to do this - either using scp or uploading the file to dropbox and using wget. If you have port forwarding enabled, you could also copy and paste. You will need the location of this file for later.
 
 You're almost there! Open the .json file, and you'll see an email associated with the "client_email" field. Copy it and share ALL your google sheets (or just your folder) with that email.
 
@@ -42,13 +44,9 @@ Where you need to replace the things inside the angle brackets (and the angle br
 1. The JSON file should be the absolute path to the file, like:
 	/root/stuff/hacs.json
 
-2. And your sheetid is the long string in the URL of the Google Sheet. If your URL is
+2. And your sheetid is the URL of the Google Sheet. If your URL is
 
-https://docs.google.com/spreadsheets/d/1tlssiBoaiolsFMpvJFaC9JCFA7tfrYu30rIU4TVvNcM/edit#gid=1199366553
-
-then your sheetid is: 1tlssiBoaiolsFMpvJFaC9JCFA7tfrYu30rIU4TVvNcM
-
-3. data is comma-separated values for your data. If I wanted to update the sheet with all the TAs names, I would use the following command:
+3. data is comma-separated values for your data, for example, "Toby,George,Matt,Louis-Henri". If I wanted to update the sheet with all the TAs' names, I would use the following command:
 
 	log -k /root/stuff/hacs.json -s 1tlssiBoaiolsFMpvJFaC9JCFA7tfrYu30rIU4TVvNcM -d "Toby,George,Matt,Louis-Henri"
 
