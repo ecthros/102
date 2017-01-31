@@ -16,5 +16,5 @@ sudo touch /logging/log.txt
 sudo chmod 777 /logging/log.txt
 
 
-sudo cp log.py /bin
+sudo cp log.py /bin/log
 
