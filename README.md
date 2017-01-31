@@ -12,30 +12,19 @@ Now that you've downloaded the code, install the necessary dependencies:
 	sudo ./setup.sh
 	cd 102
 
-Head to <a href=https://console.developers.google.com/project>Google Developers Console</a> and create a new project. 
-Under “API & auth”, in the API enable “Drive API”.
-Enabled APIs
-Go to “Credentials” and choose “New Credentials > Service Account Key”.
-Google Developers Console
-You will automatically download a JSON file with this data.
+Head to <a href=https://console.developers.google.com/apis/api/drive/overview>Google Developers Console</a>. Click on "Create Project" in the top right corner. Then select "Create a Project". Name the project anything (I named mine "Hacs 102 Group 2K). Agree to the terms and press "Create". Finally, next to "Google Drive API", make sure to click "Enable":
 
-Download Credentials JSON from Developers Console
-This is how this file may look like:
+![image](https://cloud.githubusercontent.com/assets/14065974/22453363/4bd47b48-e74c-11e6-9d71-8c6c596d5561.png)
 
-{
-    "private_key_id": "2cd … ba4",
-    "private_key": "-----BEGIN PRIVATE KEY-----\nNrDyLw … jINQh/9\n-----END PRIVATE KEY-----\n",
-    "client_email": "473 … hd@developer.gserviceaccount.com",
-    "client_id": "473 … hd.apps.googleusercontent.com",
-    "type": "service_account"
-}
-You’ll need client_email and private_key.
+Click on one of the tabs on the left labeled "Credentials". Choose “New Credentials > Service Account Key”.
 
-Next, you need to create OAuth Credentials so that you can access your Google Sheet. Follow the directions <a href=http://gspread.readthedocs.io/en/latest/oauth2.html>here</a>: . You'll need to "create a new project" - Just name it anything (I named mine "Hacs 102 Group 2K). Stop before step 5 - I've already done the rest for you with the setup script.
+![image](https://cloud.githubusercontent.com/assets/14065974/22453376/7b2b506a-e74c-11e6-95a6-33cb8318966d.png)
 
-Now that you've downloaded the JSON file, you need to move the file to your host. There are a number of ways to do this - either using scp or uploading the file to dropbox and using wget.
+Select "Compute Engine Default service account" and click "Create". A .json file will be downloaded.
 
-You're almost there! Open the JSON file up, and you'll see an email associated with the "client_email" field. Copy it and share your Google Sheet with that email.
+Now that you've downloaded the .json file, you need to move the file to your host. There are a number of ways to do this - either using scp or uploading the file to dropbox and using wget.
+
+You're almost there! Open the .json, and you'll see an email associated with the "client_email" field. Copy it and share your Google Sheet with that email.
 
 To run the script, use:
 
