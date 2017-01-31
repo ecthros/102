@@ -1,5 +1,5 @@
 #!/bin/bash
-# <3 Connor Wenck
+
 OS=$(uname)
 if [ "$OS" == "Linux" ]; then
 	sudo apt-get install python-pip python-dev libssl-dev libffi-dev curl
@@ -15,4 +15,6 @@ sudo mkdir /logging
 sudo touch /logging/log.txt
 sudo chmod 777 /logging/log.txt
 
+
 sudo cp log.py /bin
+
