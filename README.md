@@ -12,9 +12,13 @@ Now that you've downloaded the code, install the necessary dependencies:
 	sudo ./setup.sh
 	cd 102
 
-Head to <a href=https://console.developers.google.com/apis/api/drive/overview>Google Developers Console</a>. Click on "Create Project" in the top right corner. Then select "Create a Project". Name the project anything (I named mine "Hacs 102 Group 2K). Agree to the terms and press "Create". Wait for it to load, and then next to "Google Drive API", make sure to click "Enable":
+Head to <a href=https://console.developers.google.com/apis/api/drive/overview>Google Developers Console</a>. Click on "Create Project" in the top right corner. Then select "Create a Project". Name the project anything (I named mine "Hacs 102 Group 2K).
 
-![image](https://cloud.githubusercontent.com/assets/14065974/22453363/4bd47b48-e74c-11e6-9d71-8c6c596d5561.png)
+![image](https://cloud.githubusercontent.com/assets/14065974/22453687/95824976-e74e-11e6-87fe-7fd09ae55345.png)
+
+Agree to the terms and press "Create". Wait for it to load, and then next to "Google Drive API", make sure to click "Enable":
+
+![image](https://cloud.githubusercontent.com/assets/14065974/22453698/b5fe0e42-e74e-11e6-862f-cda06bc661e2.png)
 
 Click on one of the tabs on the left labeled "Credentials". Choose “New Credentials > Service Account Key”.
 
@@ -22,9 +26,12 @@ Click on one of the tabs on the left labeled "Credentials". Choose “New Creden
 
 Select "Compute Engine Default service account" and click "Create". A .json file will be downloaded.
 
-Now that you've downloaded the .json file, you need to move the file to your host. There are a number of ways to do this - either using scp or uploading the file to dropbox and using wget.
+Now that you've downloaded the .json file, you need to move the file to your host. There are a number of ways to do this - either using scp or uploading the file to dropbox and using wget. You could also copy and paste. You will need the location of this file for later.
 
-You're almost there! Open the .json, and you'll see an email associated with the "client_email" field. Copy it and share your Google Sheet with that email.
+You're almost there! Open the .json file, and you'll see an email associated with the "client_email" field. Copy it and share ALL your google sheets (or just your folder) with that email.
+
+![image](https://cloud.githubusercontent.com/assets/14065974/22453754/0ec0ccb8-e74f-11e6-8b5f-f841df75119d.png)
+
 
 To run the script, use:
 
@@ -44,3 +51,6 @@ then your sheetid is: 1tlssiBoaiolsFMpvJFaC9JCFA7tfrYu30rIU4TVvNcM
 3. data is comma-separated values for your data. If I wanted to update the sheet with all the TAs names, I would use the following command:
 
 	log -k /root/stuff/hacs.json -s 1tlssiBoaiolsFMpvJFaC9JCFA7tfrYu30rIU4TVvNcM -d "Toby,George,Matt,Louis-Henri"
+
+
+You've finished!! Now you need to figure out how often you want to run the logging command and which logs you want to update.
