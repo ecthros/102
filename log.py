@@ -54,7 +54,7 @@ def main():
 	try:
 
 		auth = authenticate(str(args.key))
-		spread = auth.open_by_key(str(args.sheet))
+		spread = auth.open_by_url(str(args.sheet))
 		
 		if(args.worksheet == None):
 			wks = spread.sheet1
