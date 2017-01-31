@@ -2,13 +2,15 @@ This guide details how to set up logging from your host to Google Drive.
 
 Begin by downloading the repository: 
 
+	sudo apt-get install git
 	git clone https://github.com/ecthros/102
 
 Now that you've downloaded the code, install the necessary dependencies:
 
 	sudo ./setup.sh
+	cd 102
 
-Next, you need to create OAuth Credentials so that you can access your Google Sheet. Follow the directions here: http://gspread.readthedocs.io/en/latest/oauth2.html. Stop before step 5 - I've already done the rest for you with the setup script.
+Next, you need to create OAuth Credentials so that you can access your Google Sheet. Follow the directions here: http://gspread.readthedocs.io/en/latest/oauth2.html. You'll need to "create a new project" - Just name it anything (I named mine "Hacs 102 Group 2K). Stop before step 5 - I've already done the rest for you with the setup script.
 
 Now that you've downloaded the JSON file, you need to move the file to your host. There are a number of ways to do this - either using scp or uploading the file to dropbox and using wget.
 
