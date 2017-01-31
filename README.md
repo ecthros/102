@@ -2,11 +2,11 @@ This guide details how to set up logging from your host to Google Drive.
 
 Begin by downloading the repository: 
 
-	```git clone https://github.com/ecthros/102```
+	git clone https://github.com/ecthros/102
 
 Now that you've downloaded the code, install the necessary dependencies:
 
-	```sudo ./setup.sh```
+	sudo ./setup.sh
 
 Next, you need to create OAuth Credentials so that you can access your Google Sheet. Follow the directions here: http://gspread.readthedocs.io/en/latest/oauth2.html. Stop before step 5 - I've already done the rest for you with the setup script.
 
@@ -16,7 +16,7 @@ You're almost there! Open the JSON file up, and you'll see an email associated w
 
 To run the script, use:
 
-	```log -k <yourJSONfile> -s <sheetid> -d <data>```
+	log -k <yourJSONfile> -s <sheetid> -d <data>
 
 The JSON file should be the absolute path to the file, like:
 	/root/stuff/hacs.json
