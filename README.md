@@ -52,3 +52,6 @@ Where you need to replace the things inside the angle brackets (and the angle br
 
 
 You've finished!! Now you need to figure out how often you want to run the logging command and which logs you want to update.
+
+If you want, feel free to play around with the -w and -d options. For help, type:
+	log --help

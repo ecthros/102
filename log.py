@@ -5,13 +5,6 @@ import argparse
 import os
 from oauth2client.client import SignedJwtAssertionCredentials
 
-#example
-#sheet = "1tlssiZoaiolsFMpvJFaC9JCFA7tfrYu30rIU4TVvNcM"
-#key = hacs.json
-#data = "Toby,Matt,George,Louis-Henri"
-#sheet = Sheet2
-#"python health.py -k hacs.json -s 1tlssiZoaiolsFMpvJFaC9JCFA7tfrYu30rIU4TVvNcM -d "Toby,Matt,George,Louis-Henri" -w Sheet2"
-
 # Finds the first empty row of the worksheet.
 def find_next_row(worksheet):
     val_list = worksheet.col_values(1)
