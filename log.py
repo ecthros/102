@@ -45,8 +45,9 @@ def main():
 	try:
 
 		auth = authenticate(str(args.key))
+
 		spread = auth.open_by_url(str(args.sheet))
-		
+
 		if(args.worksheet == None):
 			wks = spread.sheet1
 		else:
@@ -54,11 +55,21 @@ def main():
 		
 		startCol = 'A'
 		startRow = str(find_next_row(wks))
-
+		wrap = 0
 		if(args.delimiter == None):
 			for segment in args.data.split(','):
-				wks.update_acell(str(startCol) + startRow, segment)
-				startCol = chr(ord(startCol) + 1)
+				if(startCol == 'Z'):
+					wrap = 1
+					wks.update_acell(str(startCol) + startRow, segment)
+					startCol = 'A'
+				elif (wrap == 1):
+					wks.update_acell("A" + str(startCol) + startRow, segment)
+					startCol = chr(ord(startCol) + 1)
+				else:
+					wks.update_acell(str(startCol) + startRow, segment)
+					startCol = chr(ord(startCol) + 1)
+
+				
 		else:
 			for segment in args.data.split(args.delimiter):
 				wks.update_acell(str(startCol) + startRow, segment)
