@@ -1,12 +1,12 @@
 #!/bin/bash
 sudo apt update
-sudo apt-get install python-pip python-dev libssl-dev libffi-dev curl
+sudo apt-get install python3-pip python3-dev libssl-dev libffi-dev curl
 
-sudo -H pip install --upgrade pyopenssl
-sudo -H pip install --upgrade oauth2client
-sudo -H pip install --upgrade gspread
-sudo -H pip install --upgrade dateutils
-sudo -H pip install oauth2client==1.5.2
+#sudo -H pip3 install pyopenssl
+sudo -H pip3 install --upgrade oauth2client
+sudo -H pip3 install --upgrade gspread
+sudo -H pip3 install --upgrade dateutils
+sudo -H pip3 install oauth2client==1.5.2
 
 sudo mkdir /logging
 sudo touch /logging/log.txt
