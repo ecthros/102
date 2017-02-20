@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sudo apt update
 sudo apt-get install python-pip python-dev libssl-dev libffi-dev curl
 
 sudo -H pip install --upgrade pyopenssl
