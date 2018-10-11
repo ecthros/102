@@ -13,7 +13,7 @@ def find_next_row(worksheet):
         if row == '':
             return row_num
         row_num += 1
-    return None
+    return row_num
 
 #Authenticates the user to be able to use the sheet
 def authenticate(key):
@@ -79,6 +79,6 @@ def main():
 	#ICOF
 	except Exception as e:
 		print("Error:")
-		print(e.message)
+		print(e)
 
 main()
