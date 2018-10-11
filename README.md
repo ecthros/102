@@ -44,7 +44,7 @@ Where you need to replace the things inside the angle brackets (and the angle br
 1. The JSON file should be the absolute path to the file, like:
 	/root/stuff/hacs.json
 
-2. And your sheetid is the URL of the Google Sheet. If your URL is
+2. And your sheetid is the URL of the Google Sheet. This is the full url, including https:// and edit#gid=0.
 
 3. data is comma-separated values for your data, for example, "Toby,George,Matt,Louis-Henri". If I wanted to update the sheet with all the TAs' names, I would use the following command:
 
